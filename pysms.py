@@ -4,7 +4,7 @@ import sys
 
 class Message:
     
-    def __init__(self,recipient,message="No message."):
+    def __init__(self,recipient=0,message="No message."):
         self.recipient=recipient
         self.message=message
         print "init done.."
@@ -77,8 +77,8 @@ if len(sys.argv)>1:
         sms.setContent(message)
     
 sms.connect()
-#sms.sendMessage()
+sms.sendMessage()
 #sms.status('CREG?')
-sms.readMessage()
+#sms.readMessage()
 sms.disconnectPhone()
 
